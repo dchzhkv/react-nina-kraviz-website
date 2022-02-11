@@ -1,12 +1,15 @@
 import * as React from 'react';
+import { Home } from '../containers/index';
+import '../styles/reset.css';
+import '../styles/index.scss';
 
-const Main = () => {
+const Index = () => {
     return (
         <main>
             <title>Nina Kraviz</title>
-            <h1>🙃</h1>
+            <Home />
         </main>
     );
 };
 
-export default Main;
+export default Index;
