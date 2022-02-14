@@ -1,25 +1,27 @@
 $breakpoints: (
-  'phone': 400px,
-  'phone-wide': 480px,
-  'phablet': 560px,
-  'tablet-small': 640px,
-  'tablet': 768px,
-  'tablet-wide': 1024px,
-  'desktop': 1248px,
-  'desktop-wide': 1440px,
-  'desktop-large': 1680px
+  xs: 576px,
+  sm: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
 );
 
-@mixin mq($width, $type: min) {
-  @if map_has_key($breakpoints, $width) {
-    $width: map_get($breakpoints, $width);
-  }
+@mixin breakpoint($breakpoint, $direction) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
 
-  @if $type == min {
-    $width: $width - 1px;
-  }
-
-  @media only screen and (#{$type}-width: $width) {
-    @content;
+    @if $direction == max {
+      @media (max-width: ($breakpoint-value - 1)) {
+        @content;
+      }
+    } @else if $direction == min {
+      @media (min-width: $breakpoint-value) {
+        @content;
+      }
+    } @else {
+      @media ($direction: $breakpoint-value) {
+        @content;
+      }
+    }
   }
 }
