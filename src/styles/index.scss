@@ -1,0 +1,43 @@
+@import "./variables";
+@import "./mixins";
+
+@font-face {
+  font-family: "Monument Extended";
+  src: local("Monument Extended"), url("../../public/assets/fonts/MonumentExtended-Regular.woff2") format("woff2"); /* Super Modern Browsers */
+  src: local("Monument Extended"), url("../../public/assets/fonts/MonumentExtended-Regular.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
+  src: local("Monument Extended"), url("../../public/assets/fonts/MonumentExtended-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "Monument Extended Ultrabold";
+  src: local("Monument Extended Ultrabold"),
+    url("../../public/assets/fonts/MonumentExtended-Ultrabold.woff2") format("woff2"); /* Super Modern Browsers */
+  src: local("Monument Extended Ultrabold"),
+    url("../../public/assets/fonts/MonumentExtended-Ultrabold.woff") format("woff"); /* Firefox >= 3.6, any other modern browser */
+  src: local("Monument Extended Ultrabold"),
+    url("../../public/assets/fonts/MonumentExtended-Ultrabold.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+html {
+  font-size: $font-size-regular;
+
+  @include breakpoint(sm, max) {
+    font-size: $font-size-md;
+  }
+
+  @include breakpoint(xs, max) {
+    font-size: $font-size-sm;
+  }
+}
+
+body {
+  font-family: "Monument Extended";
+  background-color: $color-main-dark;
+  color: $color-main-light;
+}
+
+.container,
+header {
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
