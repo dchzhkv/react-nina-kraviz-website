@@ -1,8 +1,14 @@
 import React from 'react';
-import { main } from './index.module.scss';
+import Header from '../Header';
+import Main from '../Main';
 
 const Home = (): JSX.Element => {
-    return <div className={main}></div>;
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 };
 
 export default Home;
