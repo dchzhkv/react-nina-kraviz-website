@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Main, Tour } from '../';
+import { Header, Main, Tour, Contacts, About } from '../';
 
 const Home = (): JSX.Element => {
   return (
@@ -7,6 +7,8 @@ const Home = (): JSX.Element => {
       <Header />
       <Main />
       <Tour />
+      <Contacts />
+      <About />
     </>
   );
 };
