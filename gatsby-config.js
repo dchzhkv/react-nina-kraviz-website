@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Nina Kraviz`,
   },
   plugins: [
     {
@@ -17,6 +17,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/public/data/`,
+      }
+    },
+    `gatsby-transformer-json`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
