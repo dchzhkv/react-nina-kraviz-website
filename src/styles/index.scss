@@ -45,4 +45,13 @@ header {
 .title {
   font-family: "Monument Extended Ultrabold";
   font-size: $font-size-2xl;
+  margin-bottom: 100px;
+}
+
+.content {
+  height: 60vh;
+}
+
+.section {
+  overflow: hidden;
 }
