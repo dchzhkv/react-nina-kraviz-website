@@ -9,17 +9,26 @@ interface Props {
 const TourItem = (props: Props): JSX.Element => {
   return (
     <li key={props.items.id} className={styles.item}>
-      <div>
-        <span>{props.items.dayOfTheWeek}</span>
-        {props.items.date}
+      <div className={`${'container'} ${styles.content}`}>
+        <div className={styles.bgImageContainer}>
+          <div className={styles.bgImage} />
+        </div>
+
+        <div className={styles.dayOfTheWeek}>
+          {props.items.dayOfTheWeek}
+          <span className={styles.date}>{props.items.date}</span>
+        </div>
+
+        <div className={styles.country}>
+          <span className={styles.place}>{props.items.place}</span>
+          {props.items.city}, {props.items.country}
+        </div>
+
+        <div className={styles.linkContainer}>
+          <div className={styles.link}>Tickets</div>
+          <div className={`${styles.link} ${styles.linkClone}`}>Tickets</div>
+        </div>
       </div>
-      <div>
-        <span>{props.items.place}</span>
-        <span>
-          {props.items.date}, {props.items.country}
-        </span>
-      </div>
-      <div>Tickets</div>
     </li>
   );
 };

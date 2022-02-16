@@ -1,19 +1,20 @@
 import React from 'react';
+import * as styles from './index.module.scss';
 import { useStaticQuery, graphql } from 'gatsby';
 import { TourItem } from './components/';
 
 const Tour = (): JSX.Element => {
-  const data = useStaticQuery(graphql`
+  const tourData = useStaticQuery(graphql`
     query TourQuery {
       allTourJson {
         edges {
           node {
+            id
             date
             dayOfTheWeek
             place
             city
             country
-            id
           }
         }
       }
@@ -21,13 +22,18 @@ const Tour = (): JSX.Element => {
   `);
 
   return (
-    <section className="container">
-      <h2 className="title">Techno 2021 tour</h2>
-      <ul>
-        {data.allTourJson.edges.map((item) => (
+    <section>
+      <h2 className="title container">Techno 2022 tour</h2>
+
+      <ul className={`${'content normalScroll'} ${styles.list}`}>
+        {tourData.allTourJson.edges.map((item) => (
           <TourItem key={item.node.id} items={item.node} />
         ))}
       </ul>
+
+      <div className={styles.scrollDownIcon}>
+        <span>☟</span>
+      </div>
     </section>
   );
 };
