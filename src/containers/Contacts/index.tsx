@@ -1,5 +1,7 @@
 import React from 'react';
+import * as styles from './index.module.scss';
 import { useStaticQuery, graphql } from 'gatsby';
+import ContactsItem from './components/ContactsItem';
 
 const Contacts = (): JSX.Element => {
   const data = useStaticQuery(graphql`
@@ -10,6 +12,7 @@ const Contacts = (): JSX.Element => {
             id
             title
             link
+            img
           }
         }
       }
@@ -21,12 +24,10 @@ const Contacts = (): JSX.Element => {
       <h2 className="title">Contacts</h2>
       <div>
         {data.allContactsJson.edges.map((item) => (
-          <a key={item.node.id} href={item.node.link}>
-            {item.node.title}
-          </a>
+          <ContactsItem key={item.node.id} items={item.node} />
         ))}
       </div>
-      <div>
+      <div className={styles.mail}>
         Concerts: <span>Ninakravizconcert@gmail.com</span>
       </div>
     </section>
