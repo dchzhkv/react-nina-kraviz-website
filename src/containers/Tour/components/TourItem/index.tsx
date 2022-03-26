@@ -1,6 +1,7 @@
 import React from 'react';
 import * as styles from './index.module.scss';
 import { Tour } from '../../../../common/types';
+import Title from '../../../../components/Title';
 
 interface Props {
   items: Tour;
@@ -24,10 +25,7 @@ const TourItem = (props: Props): JSX.Element => {
           {props.items.city}, {props.items.country}
         </div>
 
-        <div className={styles.linkContainer}>
-          <div className={styles.link}>Tickets</div>
-          <div className={`${styles.link} ${styles.linkClone}`}>Tickets</div>
-        </div>
+        <Title title="Tickets" styles={styles.title} />
       </div>
     </li>
   );
