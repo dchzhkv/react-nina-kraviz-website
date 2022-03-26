@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.container {
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+
+    .titleClone {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  z-index: 1;
+
+  &.titleClone {
+    position: absolute;
+    top: 0;
+    clip-path: inset(0 100% 0 0);
+    -webkit-text-fill-color: $color-main-yellow;
+    -webkit-text-stroke: 2px $color-main-yellow;
+    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  &:not(.titleClone) {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px $color-main-light;
+  }
+}
