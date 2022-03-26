@@ -6,3 +6,10 @@ export interface Tour {
   city: string;
   country: string;
 }
+
+export interface Contact {
+  id: number;
+  link: string;
+  title: string;
+  img: string;
+}
