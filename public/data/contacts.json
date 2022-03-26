@@ -2,31 +2,37 @@
     {
         "id": 1,
         "title": "Instagram",
-        "link": "https://instagram.com/ninakraviz/"
+        "link": "https://instagram.com/ninakraviz/",
+        "img": "/assets/img/inst.jpg"
     },
     {
         "id": 2,
         "title": "soundcloud",
-        "link": "https://instagram.com/ninakraviz/"
+        "link": "https://instagram.com/ninakraviz/",
+        "img": "/assets/img/soundcloud.jpg"
     },
     {
         "id": 3,
         "title": "spotify",
-        "link": "https://instagram.com/ninakraviz/"
+        "link": "https://instagram.com/ninakraviz/",
+        "img": "/assets/img/spotify.jpg"
     },
     {
         "id": 4,
         "title": "Twitter",
-        "link": "https://instagram.com/ninakraviz/"
+        "link": "https://instagram.com/ninakraviz/",
+        "img": "/assets/img/twitter.jpg"
     },
     {
         "id": 5,
         "title": "Youtube",
-        "link": "https://instagram.com/ninakraviz/"
+        "link": "https://instagram.com/ninakraviz/",
+        "img": "/assets/img/youtube.jpg"
     },
     {
         "id": 6,
         "title": "Facebook",
-        "link": "https://instagram.com/ninakraviz/"
+        "link": "https://instagram.com/ninakraviz/",
+        "img": "/assets/img/fb.png"
     }
 ]
