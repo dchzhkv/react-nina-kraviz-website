@@ -112,6 +112,16 @@ section {
   display: block;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
   line-height: 1;
   overflow: auto;
