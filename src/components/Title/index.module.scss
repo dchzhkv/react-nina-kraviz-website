@@ -6,7 +6,7 @@
   &:hover {
     cursor: pointer;
 
-    .titleClone {
+    .titleClone :has(.titleAnim){
       clip-path: inset(0 0 0 0);
     }
   }
