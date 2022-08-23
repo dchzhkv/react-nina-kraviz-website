@@ -13,3 +13,10 @@ export interface Contact {
   title: string;
   img: string;
 }
+
+export interface Music {
+  id: number;
+  year: string;
+  title: string;
+  img: string;
+}
