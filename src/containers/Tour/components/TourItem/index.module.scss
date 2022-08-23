@@ -1,15 +1,24 @@
 @import "../../../../styles/variables";
+@import "../../../../styles/mixins";
 
 @mixin absolute-text {
   position: absolute;
-  top: -30px;
+  top: -35px;
   left: 0;
   font-size: $font-size-regular;
+
+  @include breakpoint(xs, max) {
+    font-size: $font-size-sm;
+  }
 }
 
 .item {
   position: relative;
   font-size: $font-size-lg;
+  
+  @include breakpoint(xs, max) {
+    font-size: $font-size-sm;
+  }
 
   &::before {
     content: "";
