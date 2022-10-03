@@ -27,7 +27,7 @@ const Music = (): JSX.Element => {
   `);
 
   return (
-    <section className={`${styles.section} container`} data-scroll-section>
+    <section className={`${styles.section} container unselectable`} data-scroll-section>
       <h2 className="title">Music</h2>
       <Swiper
         breakpoints={{
