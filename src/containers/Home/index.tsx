@@ -1,15 +1,20 @@
-import React from 'react';
-import { Header, Main, Tour, Contacts, About } from '../';
+import React, { useState } from 'react';
+import { Main, Tour, Contacts, About, Music } from '../';
+import useLocoScroll from '../../hooks/useLocoScroll';
 
 const Home = (): JSX.Element => {
+  const [preloader, setPreload] = useState(false);
+
+  useLocoScroll(!preloader);
+
   return (
-    <>
-      <Header />
+    <div id="main-container" data-scroll-container>
       <Main />
       <Tour />
       <Contacts />
       <About />
-    </>
+      <Music />
+    </div>
   );
 };
 
