@@ -66,6 +66,15 @@ header {
   overflow: hidden;
 }
 
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+
 //fixed locomotive-scroll bug(elements disappearing when scroll back to the top)
 [data-scroll-container] {
   perspective: 1px;
