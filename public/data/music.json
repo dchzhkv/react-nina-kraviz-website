@@ -1,0 +1,32 @@
+[
+  {
+      "id": 1,
+      "title": "Don’t You Mess With Cupid",
+      "year": "2020",
+      "img": "/assets/img/cover5.jpg"
+  },
+  {
+      "id": 2,
+      "title": "Fabric 91: Nina Kraviz",
+      "year": "2020",
+      "img": "/assets/img/cover1.jpg"
+  },
+  {
+      "id": 3,
+      "title": "DJ-Kicks: Nina Kraviz",
+      "year": "2020",
+      "img": "/assets/img/cover3.jpg"
+  },
+  {
+      "id": 4,
+      "title": "Don’t You Mess With Cupid",
+      "year": "2020",
+      "img": "/assets/img/cover2.jpg"
+  },
+  {
+      "id": 5,
+      "title": "Fabric 91: Nina Kraviz",
+      "year": "2020",
+      "img": "/assets/img/cover4.jpg"
+  }
+]
