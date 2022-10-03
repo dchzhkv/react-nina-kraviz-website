@@ -2,8 +2,10 @@ import React from 'react';
 
 const About = (): JSX.Element => {
   return (
-    <section className="container">
-      <h2 className="title">About</h2>
+    <section className="container" data-scroll-section>
+      <h2 className="title" data-scroll>
+        About
+      </h2>
     </section>
   );
 };
